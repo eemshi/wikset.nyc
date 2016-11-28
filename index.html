@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.4">
-    <!--twitter metadata start-->
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@wikset">
     <meta name="twitter:domain" content="wikset.nyc">
@@ -10,11 +10,9 @@
     <meta name="twitter:title" content="Lil Me by Wiki out now!">
     <meta name="twitter:image:src" content="http://letterracer.com/img/splash-lilme/wiki_lilme_500px.jpg">
     <meta name="twitter:description" content="Free download available on letterracer.com">
-    <!--twitter metadata end-->
-    <!--facebook metadata start-->
+
     <meta property="og:image" content="http://letterracer.com/img/splash-lilme/lilmesplashpage.png" />
     <meta name="description" content="Lil Me by Wiki out now! Free download available on letterracer.com">
-    <!--facebook metadata end-->
 
     <link rel="canonical" href="http://wikset.nyc">
     <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
@@ -23,7 +21,42 @@
     <meta name="apple-mobile-web-app-title" content="Letter Racer">
 
     <title>LIL ME</title>
-    <link rel="stylesheet" href="http://letterracer.com/css/letterracer.css">
+    <style>
+    body{font-weight:300; text-align: center; font-family: monospace;}
+    .splash-page{margin:0px auto}
+    .splash-img {
+        height: 100%;
+        width: auto;
+    }
+    @media all and (max-width:1152px) {
+        .splash-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    map area {
+    outline:none;
+    }
+    .brand-link{
+        text-transform:uppercase;
+        font-weight:300}
+    .page-foot{
+        text-align:center;
+        margin-top:25px;
+        width:100%;
+        font-weight:300;
+        text-transform:uppercase;
+        vertical-align:top}
+    .page-foot .branding,.page-foot .copyright{opacity:.6}
+    .page-foot .branding{
+        -webkit-transition:opacity 0.4s;
+        -moz-transition:opacity 0.4s;
+        -ms-transition:opacity 0.4s;
+        -o-transition:opacity 0.4s;
+        transition:opacity 0.4s}
+    .page-foot .branding:hover{opacity:1}
+    .page-foot .copyright{font-size:12px;margin: 7px;}
+    </style>
     <script src="js/mobile.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/responsive-imagemaps.min.js"></script>
@@ -51,7 +84,7 @@
 </head>
 
 <body>
-<div class="splash-page"><div style="color:#fff;display:inline;">CONTINUE TO SITE --></div><img style="display:inline;" usemap="#splash" class="splash-img" src="img/splash-lilme/lilme_mobile.png" name="splash"><div style="display:inline;"><a href="http://blog.letterracer.com">CONTINUE TO SITE --></a></div></div>
+<div class="splash-page"><img usemap="#splash" class="splash-img" src="img/splash-lilme/lilme_mobile.png" name="splash"></div>
 <map name="splash">
     <area shape="poly" coords="523,86,564,73,548,43,554,38,573,70,585,62,616,60,622,42,619,33,619,22,626,24,630,33,636,64,641,74,664,72,647,121,617,117,594,117,570,115,547,114,525,93" onMouseOver="outnowGo()" onMouseOut="outnowStop()">
     <area shape="poly" target="_blank" href="https://s3.amazonaws.com/lr-downloads/lil_me_download.zip" coords="348,159,823,159,823,635,348,635" onMouseOver="downloadGo()" onMouseOut="downloadStop()" onClick="ga('send', 'event', 'downloads', 'lilme');">
@@ -66,7 +99,7 @@
 <p></p>
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/172904351%3Fsecret_token%3Ds-hF2Ld&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 <div class="page-foot">
-    <a class="branding" href="http://blog.letterracer.com"><img src="img/splash-lilme/logo.png" width="100" height="100"></a>
+    <a class="branding" href="http://shop.letterracer.com"><img src="img/splash-lilme/logo.png" width="100" height="100"></a>
     <div class="copyright">Copyright &copy; 2016 Letter Racer</div>
 </div>
 </body>
