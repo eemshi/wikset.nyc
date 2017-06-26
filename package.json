@@ -1,0 +1,23 @@
+{
+  "name": "wikset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eemshi/wikset.nyc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eemshi/wikset.nyc/issues"
+  },
+  "homepage": "https://github.com/eemshi/wikset.nyc#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
