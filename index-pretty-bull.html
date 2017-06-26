@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>WIKI</title>
+        <meta name="description" content="Official WIKI site. Pretty Bull video out now.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="icon" type="image/png" href="http://wikset.nyc/img/prettybull/favicon.png" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style>
+            html {
+                font-family: 'VT323', monospace;
+                font-weight: 400;
+                color:#fff;
+            } 
+            body {
+                margin:0px;
+                background: url(http://wikset.nyc/img/prettybull/background.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+            main {
+                width: 90%;
+                max-width: 800px;
+                text-align: center;
+                margin:20px auto;
+            }
+            .videowrap {
+                width: 100%;
+                margin:20px auto;
+            }
+            .logo {
+                width: 100%;
+                max-width: 150px;
+                margin:20px auto;
+            }
+            .emaillist {
+                margin:40px auto;
+            }
+            .emaillist p {
+                letter-spacing: 1px;
+                font-size: 22px;
+            }
+            .inputbox {
+                background: transparent;
+                border:none;
+                border-bottom: 2px solid #fff;
+                font-size: 22px;
+                letter-spacing: 1px;
+                margin:5px auto;
+                width: 100%;
+                max-width: 350px;
+                font-family: 'VT323', monospace;
+                color:#eee;
+                text-transform: uppercase;
+                outline:0px;
+            }
+            .inputbox::-webkit-input-placeholder {
+              font-family: 'VT323', monospace;
+              color:#eee;
+              text-transform: uppercase;
+            }
+
+            .inputbox:-ms-input-placeholder {
+              font-family: 'VT323', monospace;
+              color:#eee;
+              text-transform: uppercase;
+            }
+
+            .inputbox:-moz-placeholder {
+              font-family: 'VT323', monospace;
+              color:#eee;
+              text-transform: uppercase;
+            }
+
+            .inputbox::-moz-placeholder {
+              font-family: 'VT323', monospace;
+              color:#eee;
+              text-transform: uppercase;
+            }
+            .emaillist .submitbtn {
+                width: 100%;
+                max-width: 350px;
+                padding:5px 10px;
+                background: #fff;
+                color:#000;
+                font-family: 'VT323', monospace;
+                text-transform: uppercase;
+                font-size: 22px;
+                letter-spacing: 1px;
+                border:none;
+                margin:5px auto;
+            }
+            @media screen and (max-width: 700px) {
+                body {
+                    background: url(http://wikset.nyc/img/prettybull/background.jpg) repeat center center static;
+                }
+            }
+            form
+        </style>
+    </head>
+    <body>
+        
+        <main>
+          <img class="logo" src="http://wikset.nyc/img/prettybull/logo-white.png">
+        
+          <div class="videowrap">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/29f1FTjTcZs?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div class="emaillist">
+          <p>SIGN UP FOR WIKI UPDATES</p>
+            <form action="http://beggarsdev.com/wiki/subscribe.php" method="POST" accept-charset="utf-8">
+              <input class="inputbox" type="text" name="name" placeholder="Enter Name" /><br/>
+              <input class="inputbox" type="text" name="email" placeholder="Enter Email" /><br/>
+              <input class="submitbtn" type="submit" name="Subscribe"/>
+            </form>
+          </div>
+
+        </main>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            /*global jQuery */
+            /*jshint browser:true */
+            /*!
+            * FitVids 1.1
+            *
+            * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+            * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+            * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+            *
+            */
+
+            (function( $ ){
+
+              "use strict";
+
+              $.fn.fitVids = function( options ) {
+                var settings = {
+                  customSelector: null
+                };
+
+                if(!document.getElementById('fit-vids-style')) {
+                  // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+                  var head = document.head || document.getElementsByTagName('head')[0];
+                  var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+                  var div = document.createElement('div');
+                  div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+                  head.appendChild(div.childNodes[1]);
+                }
+
+                if ( options ) {
+                  $.extend( settings, options );
+                }
+
+                return this.each(function(){
+                  var selectors = [
+                    "iframe[src*='player.vimeo.com']",
+                    "iframe[src*='youtube.com']",
+                    "iframe[src*='youtube-nocookie.com']",
+                    "iframe[src*='kickstarter.com'][src*='video.html']",
+                    "object",
+                    "embed"
+                  ];
+
+                  if (settings.customSelector) {
+                    selectors.push(settings.customSelector);
+                  }
+
+                  var $allVideos = $(this).find(selectors.join(','));
+                  $allVideos = $allVideos.not("object object"); // SwfObj conflict patch
+
+                  $allVideos.each(function(){
+                    var $this = $(this);
+                    if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+                    var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+                        width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+                        aspectRatio = height / width;
+                    if(!$this.attr('id')){
+                      var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+                      $this.attr('id', videoID);
+                    }
+                    $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+                    $this.removeAttr('height').removeAttr('width');
+                  });
+                });
+              };
+            // Works with either jQuery or Zepto
+            })( window.jQuery || window.Zepto );
+
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.videowrap').fitVids();
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-80270538-15', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
