@@ -14,17 +14,21 @@
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://use.typekit.net/uwq6byv.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <style>
             html {
-                font-family: 'VT323', monospace;
-                font-weight: 400;
-                color:#fff;
-            } 
+              font-family: "din-condensed",sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              color:#fff;
+            }
             body {
                 margin:0px;
-                background: url(http://wikset.nyc/img/prettybull/background.jpg) no-repeat center center fixed;
-                -webkit-background-size: cover;
-                background-size: cover;
+                background: url('https://raw.githubusercontent.com/eemshi/wikset.nyc/master/img/wiksky.jpg');
+                background-position: center;
+                -webkit-background-size: 100%;;
+                background-size: 100%;
             }
             main {
                 width: 90%;
@@ -57,7 +61,7 @@
                 margin:5px auto;
                 width: 100%;
                 max-width: 350px;
-                font-family: 'VT323', monospace;
+                font-family: "din-condensed",sans-serif;
                 color:#eee;
                 text-transform: uppercase;
                 outline:0px;
@@ -66,22 +70,22 @@
                 padding:0px;
             }
             .inputbox::-webkit-input-placeholder {
-              font-family: 'VT323', monospace;
+              font-family: "din-condensed",sans-serif;
               color:#eee;
               text-transform: uppercase;
             }
             .inputbox:-ms-input-placeholder {
-              font-family: 'VT323', monospace;
+              font-family: "din-condensed",sans-serif;
               color:#eee;
               text-transform: uppercase;
             }
             .inputbox:-moz-placeholder {
-              font-family: 'VT323', monospace;
+              font-family: "din-condensed",sans-serif;
               color:#eee;
               text-transform: uppercase;
             }
             .inputbox::-moz-placeholder {
-              font-family: 'VT323', monospace;
+              font-family: "din-condensed",sans-serif;
               color:#eee;
               text-transform: uppercase;
             }
@@ -91,7 +95,7 @@
                 padding:5px 10px;
                 background: #fff;
                 color:#000;
-                font-family: 'VT323', monospace;
+                font-family: "din-condensed",sans-serif;
                 text-transform: uppercase;
                 font-size: 22px;
                 letter-spacing: 1px;
@@ -103,19 +107,34 @@
             .poster {
               width: 100%;
             }
+            .title {
+              font-size: 150px;
+              line-height: 130px;
+              letter-spacing: 1px;
+              margin:20px auto;
+            }
+            .subtitle {
+              font-size: 25px;
+              letter-spacing: 1px;
+              margin:10px auto;
+            }
             @media screen and (max-width: 700px) {
                 body {
                     background: url(http://wikset.nyc/img/prettybull/background.jpg) repeat center center static;
                 }
             }
-            form
         </style>
     </head>
     <body>
-        
+
         <main>
-          <img class="logo" src="http://wikset.nyc/img/prettybull/wiki-logo-white.png">
-        
+          <h1 class="title">WIKI</h1>
+          <p class="subtitle">NEW ALBUM 'NO MOUNTAINS IN MANHATTAN' OUT AUG 25 ON XL RECORDINGS</p>
+
+          <img class="poster" src="http://wikset.nyc/img/cover-web.jpg" />
+          <div class="videowrap">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/o-ziihiGyFc?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
           <div class="videowrap">
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/29f1FTjTcZs?rel=0" frameborder="0" allowfullscreen></iframe>
           </div>
