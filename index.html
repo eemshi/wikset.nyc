@@ -46,11 +46,15 @@
                 margin:20px auto;
             }
             .emaillist {
-                margin:40px auto;
+              margin: 25px auto 10px;
+              display: inline-block;
+              padding: 20px;
+              border: 2px solid #fff;
             }
             .emaillist p {
                 letter-spacing: 1px;
                 font-size: 22px;
+                margin:5px auto;
             }
             .inputbox {
                 background: transparent;
@@ -106,6 +110,7 @@
             }
             .poster {
               width: 100%;
+              margin: 20px auto 50px;
             }
             .title {
               font-size: 150px;
@@ -136,6 +141,13 @@
         <main>
           <h1 class="title">WIKI</h1>
           <p class="subtitle">NEW ALBUM 'NO MOUNTAINS IN MANHATTAN' OUT NOW - <a href="http://x-l-r.co/NMIM" target="blank" class="listen">LISTEN HERE</a></p>
+          <div class="emaillist">
+            <p>SUBSCRIBE FOR VINYL UPDATES AND MORE</p>
+            <form action="http://beggarsdev.com/wiki/subscribe.php" method="POST" accept-charset="utf-8">
+              <input class="inputbox" type="text" name="email" placeholder="Enter Email" /><br/>
+              <input class="submitbtn" type="submit" name="Subscribe"/>
+            </form>
+          </div>
           <div class="shows">
             <p class="subtitle">RELEASE SHOWS</p>
             <p class="subtitle">NEW YORK - 9/11 - <a href="http://bit.ly/2voLKpa" target="blank" class="listen">TICKETS</a></p>
@@ -144,14 +156,7 @@
           </div>
 
           <a href="http://x-l-r.co/NMIM" target="blank"><img class="poster" src="http://wikset.nyc/img/cover-web.jpg" /></a>
-          <div class="emaillist">
-          <p>SIGN UP FOR WIKI UPDATES</p>
-            <form action="http://beggarsdev.com/wiki/subscribe.php" method="POST" accept-charset="utf-8">
-              <input class="inputbox" type="text" name="name" placeholder="Enter Name" /><br/>
-              <input class="inputbox" type="text" name="email" placeholder="Enter Email" /><br/>
-              <input class="submitbtn" type="submit" name="Subscribe"/>
-            </form>
-          </div>
+
           <!--
           <div class="videowrap">
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/o-ziihiGyFc?rel=0" frameborder="0" allowfullscreen></iframe>
